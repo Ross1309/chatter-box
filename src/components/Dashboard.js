@@ -2,6 +2,7 @@ import React from 'react'
 
 import {Panel} from './Panel'
 import { CustomerDetails } from './CustomerDetails'
+import { Chat } from './Chat'
 import { DashboardContainer, DashboardColumn } from './Dashboard.styles'
 
 const mockUser = {
@@ -21,7 +22,7 @@ export const Dashboard = () => {
                         <CustomerDetails user={mockUser}/>
                     </Panel> 
                     <Panel title="Chat">
-                        <CustomerDetails user={mockUser}/>
+                        <Chat />
                     </Panel>
                 </DashboardColumn>
                 <DashboardColumn colWidth="28%">
