@@ -2,9 +2,9 @@ import { createAction } from '@reduxjs/toolkit';
 
 const ACTION_PREFIX = 'chatter-box/messages';
 
-export const getMessagesCompleted = createAction(`${ACTION_PREFIX}/LOADED_GET_ACTIVITY_TIMELINE`);
-export const getMessagesFailed = createAction(`${ACTION_PREFIX}/FAILED_GET_ACTIVITY_TIMELINE`);
-export const getMessagesStarted = createAction(`${ACTION_PREFIX}/LOADING_GET_ACTIVITY_TIMELINE`);
+export const getMessagesCompleted = createAction(`${ACTION_PREFIX}/LOADED_MESSAGES`);
+export const getMessagesFailed = createAction(`${ACTION_PREFIX}/FAILED_MESSAGES`);
+export const getMessagesStarted = createAction(`${ACTION_PREFIX}/LOADING_MESSAGES`);
 export const getMessages = (customerId) => async (dispatch) => {
     try {
       dispatch(getMessagesStarted());
@@ -29,7 +29,7 @@ export const getMessages = (customerId) => async (dispatch) => {
             ],
         }
       }
-      
+
       dispatch(
         getMessagesCompleted({
            messages: resp.data.messages
@@ -38,6 +38,37 @@ export const getMessages = (customerId) => async (dispatch) => {
       return resp;
     } catch (err) {
       dispatch(getMessagesFailed(err));
+      throw err;
+    }
+  };
+
+export const sendMessageCompleted = createAction(`${ACTION_PREFIX}/LOADED_NEW_MESSAGE`);
+export const sendMessageFailed = createAction(`${ACTION_PREFIX}/FAILED_NEW_MESSAGE`);
+export const sendMessageStarted = createAction(`${ACTION_PREFIX}/LOADING_NEW_MESSAGE`);
+export const sendMessage = (customerId, message) => async (dispatch, getState) => {
+    try {
+      dispatch(sendMessageStarted());
+      // Call to API to post new chat message
+      //const resp = await dispatch(sendMessageApi(customerId, message));
+      const resp = {
+        data: {
+            messages: [
+                {
+                    message: message,
+                    type: 'user',
+                },
+            ],
+        }
+      }
+      
+      dispatch(
+        sendMessageCompleted({
+           messages: getState().messages.concat(resp.data.messages)
+        }),
+      );
+      return resp;
+    } catch (err) {
+      dispatch(sendMessageFailed(err));
       throw err;
     }
   };

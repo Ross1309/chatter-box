@@ -1,6 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
 
-import {getMessagesCompleted, getMessagesFailed, getMessagesStarted } from './Chat.actions'
+import {getMessagesCompleted, getMessagesFailed, getMessagesStarted, sendMessageCompleted, sendMessageFailed, sendMessageStarted } from './Chat.actions'
 
 const LOADING_STATUS = {
     failed: false,
@@ -40,6 +40,25 @@ export const messagesReducer = createReducer(getMessagesInitialState(), builder 
       })
   
       .addCase(getMessagesFailed, state => {
+        state.isLoadingMessages = {
+            ...FAILED_STATUS,
+          };
+      })
+
+      .addCase(sendMessageCompleted, (state, { payload }) => {
+        state.messages = payload.messages;
+        state.isLoadingMessages = {
+            ...LOADED_STATUS,
+        };
+      })
+  
+      .addCase(sendMessageStarted, state => {
+        state.isLoadingMessages = {
+          ...LOADING_STATUS,
+        };
+      })
+  
+      .addCase(sendMessageFailed, state => {
         state.isLoadingMessages = {
             ...FAILED_STATUS,
           };

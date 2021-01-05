@@ -6,6 +6,7 @@ export const PanelContainer = styled.div`
   border: 1px solid #738694;
   border-radius: 5px;
   margin: 12px 0px;
+  background: #F5F8FA;
 `
 
 export const PanelHeader = styled.div`
@@ -20,5 +21,5 @@ export const PanelHeader = styled.div`
 export const PanelBody = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 6px;
+  padding: 12px;
 `

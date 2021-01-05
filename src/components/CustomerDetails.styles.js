@@ -17,6 +17,7 @@ export const DetailItem = styled.div`
   flex-direction: column;
   text-align: left;
   margin-right: 42px;
+  overflow-wrap: anywhere;
 `
 
 export const DetailLabel = styled.div`
