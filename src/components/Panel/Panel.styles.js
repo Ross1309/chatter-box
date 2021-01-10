@@ -12,7 +12,7 @@ export const PanelContainer = styled.div`
 export const PanelHeader = styled.div`
   display: flex;
   align-contents: center;
-  padding: 6px;
+  padding: 8px;
   font-size: 18px;
   font-weight: bold;
   border-bottom: 1px solid #738694;
@@ -21,5 +21,4 @@ export const PanelHeader = styled.div`
 export const PanelBody = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 12px;
 `

@@ -8,7 +8,7 @@ export const Topbar = () => {
             <Navbar.Group align='left'>
                 <Navbar.Heading className="bp3-minimal">Chatter Box</Navbar.Heading>
                 <Navbar.Divider />
-                <Button className="bp3-minimal" icon="home" text="Home" />
+                <Button className="bp3-minimal" icon="home" />
             </Navbar.Group>
             <Navbar.Group align='right'>
                 <Button className="bp3-minimal" icon="user" />

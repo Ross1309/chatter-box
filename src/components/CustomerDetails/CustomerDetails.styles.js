@@ -4,6 +4,7 @@ export const Details = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
+  padding: 12px;
 `
 
 export const DetailRow = styled.div`
@@ -18,6 +19,8 @@ export const DetailItem = styled.div`
   text-align: left;
   margin-right: 42px;
   overflow-wrap: anywhere;
+  width: 250px;
+  flex: auto;
 `
 
 export const DetailLabel = styled.div`

@@ -6,6 +6,7 @@ export const ChatContainer = styled.div`
   width: 100%;
   flex-direction: column;
   justify-content: flex-end;
+  padding: 12px;
 `
 
 export const ChatBubble = styled.div`

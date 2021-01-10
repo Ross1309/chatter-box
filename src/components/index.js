@@ -1,5 +1,5 @@
-import  { Dashboard } from './Dashboard'
-import { Topbar } from './TopBar'
+import  { Dashboard } from './Dashboard/Dashboard'
+import { Topbar } from './TopBar/TopBar'
 
 export const Components = {
     Dashboard,

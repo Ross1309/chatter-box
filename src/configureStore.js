@@ -3,7 +3,7 @@ import thunkMiddleware from 'redux-thunk'
 
 import monitorReducersEnhancer from './enhancers/monitorReducers'
 import loggerMiddleware from './middleware/logger'
-import {messagesReducer} from './components/Chat.reducer'
+import {messagesReducer} from './components/Chat/Chat.reducer'
 
 export default function configureStore(preloadedState) {
   const middlewares = [loggerMiddleware, thunkMiddleware]
