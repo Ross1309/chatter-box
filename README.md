@@ -97,7 +97,7 @@ Choose state management (ie. Redux, Apollo or Context Api) and real time data fe
 Would need socket connection or subscription for chat stream. 
 Would need a customer endpoint for details, a transaction endpoint for an array of transaction histories. Would expect to have a customer id to pass as a param to fetch the correct details and transactions.
 
-###Starting Off
+### Starting Off
 To start the project I would build out a dashboard component as the main container and a nav section. In the dashboard component, determine and build an initial grid for the rest of the components to live in. This can be created via flexbox or css grid keeping in mind how the columns and rows will respond on a smaller screen. With the initial grid in place create a generic Panel component that will house basic padding and headers for the chat, transactions and details. 
 
 ### Customer Details
