@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const TransactionsContainer = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const TransactionsContainer = styled.div`
   cursor: pointer;
 
   &:hover {
-      background: #EBF1F5;
+    background: #ebf1f5;
   }
 
   &:last-child {
@@ -18,18 +18,18 @@ export const TransactionsContainer = styled.div`
 
   p {
     margin-bottom: 4px;
-  } 
-`
+  }
+`;
 
 export const TransactionTitle = styled.p`
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 4px;
-`
+`;
 
 export const TransactionsDescription = styled.p`
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-`
+`;

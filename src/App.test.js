@@ -1,8 +1,23 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
+import { renderWithRedux } from './renderWithRedux';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('renders the 3 sections of th app', () => {
+  test('renders the Chat section', () => {
+    renderWithRedux(<App />, { initialState: { messages: [] } });
+    const chatComponent = screen.getByText('Chat');
+    expect(chatComponent).toBeInTheDocument();
+  });
+
+  test('renders the Customer Details section', () => {
+    renderWithRedux(<App />, { initialState: { messages: [] } });
+    const customerDetailComponent = screen.getByText('Customer Details');
+    expect(customerDetailComponent).toBeInTheDocument();
+  });
+
+  test('renders the Transaction History section', () => {
+    renderWithRedux(<App />, { initialState: { messages: [] } });
+    const transactionsComponent = screen.getByText('Transaction History');
+    expect(transactionsComponent).toBeInTheDocument();
+  });
 });

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const PanelContainer = styled.div`
   display: flex;
@@ -6,8 +6,8 @@ export const PanelContainer = styled.div`
   border: 1px solid #738694;
   border-radius: 5px;
   margin: 12px 0px;
-  background: #F5F8FA;
-`
+  background: #f5f8fa;
+`;
 
 export const PanelHeader = styled.div`
   display: flex;
@@ -16,9 +16,9 @@ export const PanelHeader = styled.div`
   font-size: 18px;
   font-weight: bold;
   border-bottom: 1px solid #738694;
-`
+`;
 
 export const PanelBody = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
