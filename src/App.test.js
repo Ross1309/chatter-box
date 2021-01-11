@@ -3,6 +3,12 @@ import { renderWithRedux } from './renderWithRedux';
 import App from './App';
 
 describe('renders the 3 sections of th app', () => {
+  test('renders the Top Bar', () => {
+    renderWithRedux(<App />, { initialState: { messages: [] } });
+    const chatComponent = screen.getByText('Chatter Box');
+    expect(chatComponent).toBeInTheDocument();
+  });
+
   test('renders the Chat section', () => {
     renderWithRedux(<App />, { initialState: { messages: [] } });
     const chatComponent = screen.getByText('Chat');

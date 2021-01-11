@@ -7,6 +7,8 @@ export const TransactionsContainer = styled.div`
   text-align: left;
   border-bottom: 1px solid #738694;
   cursor: pointer;
+  max-height: 100vh;
+  overflow: auto;
 
   &:hover {
     background: #ebf1f5;
